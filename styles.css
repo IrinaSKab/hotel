@@ -10,22 +10,44 @@
 	font-weight: 700;
 }
 
+@keyframes button-animation {
+	0% {
+		background: #db0536;
+	}
+	100% {
+		background: #ac0027;
+	}
+}
+
 .description {
-	padding-top: 55px;
-	padding-left: 426px;
+	display: flex;
+	flex-direction: row;
+}
+
+.logo {
+	width: 69px;
+	height: 54px;
+	margin-top: 55px;
+	margin-left: 182px;
+	border-radius: 10px 0 10px 0px;
+}
+
+.name {
+	padding-top: 40px;
+	padding-left: 31px;
+	color: #ffffff;
+	font-family: ProximaNova;
+	line-height: 0.8;
 }
 
 .title {
-	color: #ffffff;
-	font-family: ProximaNova;
 	font-size: 25px;
 	font-weight: 700;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 .subtitle {
-	color: #ffffff;
-	font-family: ProximaNova;
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -38,49 +60,119 @@
 	background-size: cover;
 }
 
+.image::before {
+	background-image: linear-gradient(to top, #35363c, #35363c), linear-gradient(to bottom, #35363c, #35363c);
+	width: 100%;
+	height: 900px;
+	display: block;
+	position: absolute;
+	opacity: 0.3;
+}
+
 .form {
-	margin-top: 120px;
-	margin-left: 326px;
 	width: 1148px;
 	height: 473px;
 	background-color: #ffffff;
 	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 106px;
+}
+
+.form__search {
 	text-align: center;
+}
+
+.form__search::before {
+	content: "";
+	width: 15px;
+	height: 15px;   
+	background-image: url("images/search.png");
+	background-repeat: no-repeat;
+	display: inline-block;
 }
 
 .form__textarea {
 	width: 952px;
-	margin-top: 67px;
+	margin-top: 70px;
 	border: none;
 	border-bottom: 1px solid rgba(53, 54, 60);
 	font-family: ProximaNova;
 	font-size: 16px;
-	text-align: left;
-	color: #a5a7b5;
+	color: #1e1f26;
 	font-weight: 400;
-} 
+	line-height: 0.5;
+	padding-left: 10px;
+}
 
 .form__textarea:focus {
 	outline: none;
 }
 
 .form__input {
-	margin-top: 80px;
+	margin-top: 75px;
 	margin-left: 98px;
 }
 
 .form__inputDate {
-	width: 301px;
-	height: 50px;
+	width: 298px;
+	height: 46px;
+	margin-right: 6px;
 	border-radius: 3px;
 	border: solid 1px #35363c;
+	font-family: ProximaNova;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.76;
+	color: #db0536;
+	padding-left: 10px;
+}
+
+.form__inputDate:focus {
+	outline: none;
 }
 
 .form__inputPerson {
 	width: 105px;
-	height: 50px;
+	height: 49px;
 	border-radius: 3px;
 	border: solid 1px #35363c;
+	font-family: ProximaNova;
+	font-size: 18px;
+	font-weight: 700;
+	color: #db0536;
+	margin-left: 31px;
+	padding-left: 10px;
+}
+
+.form__inputPerson:focus {
+	outline: none;
+}
+
+.number {
+	background-color: #1e1f26;
+	color: #ffffff;
+}
+
+.number:hover {
+	cursor: pointer;
+}
+
+.number::before {
+	background-color: #2d2e37;
+}
+
+.checkBox {
+	width: 23px;
+	height: 23px;
+}
+
+.checkBox:hover {
+	cursor: pointer;
+}
+
+.plane {
+	width: 20px;
+	height: 20px;
 }
 
 .form__button {
@@ -93,7 +185,17 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.76;
-	text-align: center;
 	color: #ffffff;
 	margin-top: 100px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.form__button:focus {
+	outline: none;
+}
+
+.form__button:hover {
+	cursor: pointer;
+	animation: button-animation 3s infinite ease-in-out;
 }
