@@ -12,12 +12,12 @@
 
 @keyframes button-animation {
 	0% {
-		color: #ffffff;
 		background: #db0536;
+		border: 2px solid #db0536;
 	}
 	100% {
-		color: #ffffff;
 		background: #ac0027;
+		border: 2px solid #ac0027;
 	}
 }
 
@@ -81,8 +81,7 @@
 	background-color: #ffffff;
 	border-radius: 5px;
 	margin-top: 109px;
-	padding-top: 70px;
-	padding-left: 98px;
+	padding: 70px 98px 70px 98px;
 	box-sizing: border-box;	
 }
 
@@ -94,11 +93,11 @@
 	content: "";
 	width: 15px;
 	height: 15px;   
-	background-image: url("images/search.png");
+	background-image: url("images/search1.png");
 	display: inline-block;
 	position: relative;
 	right: 26px;
-	bottom: 7px;
+	bottom: 10px;
 }
 
 .form__textarea {
@@ -119,11 +118,11 @@
 
 .form__input {
 	margin-top: 65px;
-	margin-bottom: 22px;
+	margin-bottom: 27px;
 	display: flex;
 }
 
-.form__inputDate, .form__inputPerson {
+.form__inputDate {
 	width: 284px;
 	height: 46px;
 	padding-left: 14px;
@@ -135,11 +134,6 @@
 	font-weight: 700;
 	line-height: 1.76;
 	color: #db0536;	
-}
-
-.form__inputPerson-size {
-	width: 105px;
-	height: 49px;
 }
 
 .form__inputDate:focus {
@@ -165,34 +159,24 @@
 	line-height: 2.26;
 	color: #1e1f26;
 	width: 105px;
-	margin-right: 9px;
+	margin-right: 10px;
 }
 
-.number {
-	background-color: #1e1f26;
-	color: #ffffff;
-}
-
-.number:hover {
-	cursor: pointer;
-}
-
-.number::before {
-	background-color: #2d2e37;
+.nameInputPerson_adult {
+	margin-left: 30px;
 }
 
 .form__checkBox {
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
-	width: 430px;
-	margin-bottom: 15px;
+	width: 330px;
+	margin-bottom: 21px;
 }
 
 .checkBox {
-	width: 23px;
-	height: 23px;
-	margin-right: 8px;
+	width: 24px;
+	height: 24px;
 }
 
 .checkBox:hover {
@@ -202,14 +186,14 @@
 .logo-checkBox {
 	width: 20px;
 	height: 20px;
-	margin-right: 8px;
+	margin-left: 6px;
+	margin-right: 6px;
 }
 
 .text-checkBox {
+	font-family: ProximaNova;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.98;
-	word-spacing: 1.5;
 }
 
 .form__button {
@@ -223,7 +207,8 @@
 	font-weight: 400;
 	line-height: 1.76;
 	color: #ffffff;
-	margin-left: 350px;
+	margin: 0 auto;
+	display: block;
 	text-align: center;
 }
 
@@ -233,5 +218,75 @@
 
 .form__button:hover {
 	cursor: pointer;
-	animation: button-animation 3s infinite ease-in-out;
+	animation: button-animation 0.3s normal forwards;
 }
+
+.select {
+	display:flex;
+	flex-direction: column;
+	position:relative;
+	width:105px;
+	height:50px;
+	margin-top: 5px;
+	font-family: ProximaNova;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.number {
+	color: #ffffff;	
+	padding-left: 15px;
+	min-height:50px;
+	border-radius: 3px;
+	display:flex;
+	align-items:center;
+	background:  #1e1f26;
+	border: solid 1px #35363c;
+	position:absolute;
+	top:0;
+	width: 100%;
+	pointer-events:none;
+	order:2;
+	z-index:1;
+	transition:background .4s ease-in-out;
+	box-sizing:border-box;
+	overflow:hidden;
+	white-space:nowrap;  
+}
+
+.number:hover {
+	background: #2d2e37;
+}
+
+.select:focus .number {
+	position:relative;
+	pointer-events:all;
+}
+
+.select__number {
+	opacity:0;
+	position:absolute;
+	left:-99999px;
+}
+
+.select__number:checked + .number {
+	order: 1;
+	z-index:2;
+	background: #ffffff;
+	position:relative;
+	color: #db0536;
+}
+
+.select__number:checked + .number:after {
+	content:'';
+	width: 17px;
+	height: 17px;
+	background-image: url("images/arrow-down.png");
+	background-repeat: no-repeat;
+	position: relative;
+	pointer-events:none;
+	left: 54px;
+	z-index:3;
+}
+
+
