@@ -202,6 +202,7 @@
 
 .number:hover {
 	background: #2d2e37;
+	cursor: pointer;
 }
 
 .select:focus .number {
@@ -225,9 +226,9 @@
 
 .select__number:checked + .number:after {
 	content:'';
+	background-image: url("images/arrow-down.svg");	
 	width: 17px;
 	height: 17px;
-	background-image: url("images/arrow-down.svg");
 	background-repeat: no-repeat;
 	position: relative;
 	pointer-events:none;
