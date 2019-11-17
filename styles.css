@@ -119,7 +119,7 @@
 
 .form__input {
 	margin-top: 65px;
-	margin-bottom: 27px;
+	margin-bottom: 41px;
 	display: flex;
 }
 
@@ -165,61 +165,6 @@
 
 .nameInputPerson_adult {
 	margin-left: 30px;
-}
-
-.form__checkBox {
-	display: flex;
-	align-items: center;
-	margin: 0 auto;
-	width: 330px;
-	margin-bottom: 21px;
-}
-
-.checkBox {
-	width: 24px;
-	height: 24px;
-}
-
-.checkBox:hover {
-	cursor: pointer;
-}
-
-.logo-checkBox {
-	width: 20px;
-	height: 20px;
-	margin-left: 6px;
-	margin-right: 6px;
-}
-
-.text-checkBox {
-	font-family: ProximaNova;
-	font-size: 16px;
-	font-weight: 400;
-}
-
-.form__button {
-	background: #db0536;
-	border: 2px solid #db0536;
-	width: 254px;
-	height: 61px;
-	border-radius: 30.5px;
-	font-family: ProximaNova;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 1.76;
-	color: #ffffff;
-	margin: 0 auto;
-	display: block;
-	text-align: center;
-}
-
-.form__button:focus {
-	outline: none;
-}
-
-.form__button:hover {
-	cursor: pointer;
-	animation: button-animation 0.3s normal forwards;
 }
 
 .select {
@@ -291,4 +236,100 @@
 	background-size: contain;
 }
 
+.form__checkbox {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	width: 332px;
+	margin-bottom: 27px;
+}
 
+.checkbox {
+	width: 24px;
+	height: 24px;
+}
+
+.logo-checkbox {
+	width: 20px;
+	height: 20px;
+	margin-left: 6px;
+	margin-right: 2px;
+}
+
+.text-checkbox {
+	font-family: ProximaNova;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.98;
+	color: #35363c;
+}
+
+.checkbox:checked, 
+.checkbox:not(:checked){
+	position: absolute;
+	left: -9999px;
+}
+
+.checkbox:checked + label, 
+.checkbox:not(:checked) + label{
+	display: inline-block;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+}
+
+.checkbox:checked + label:before, 
+.checkbox:not(:checked) + label:before{
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 21px;
+	height: 21px;
+	border: 1px solid #35363c;
+}
+
+.checkbox:checked + label:after, 
+.checkbox:not(:checked) + label:after{
+	content: "";
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	width: 11px;
+	height: 11px;
+	background-image: url(images/square.svg);
+	background-size: contain;
+}
+
+.checkbox:not(:checked) + label:after{
+	opacity: 0;
+}
+
+.checkbox:checked + label:after{
+	opacity: 1;
+}
+
+.form__button {
+	background: #db0536;
+	border: 2px solid #db0536;
+	width: 254px;
+	height: 61px;
+	border-radius: 30.5px;
+	font-family: ProximaNova;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.76;
+	color: #ffffff;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+}
+
+.form__button:focus {
+	outline: none;
+}
+
+.form__button:hover {
+	cursor: pointer;
+	animation: button-animation 0.3s normal forwards;
+}
