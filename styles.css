@@ -150,8 +150,8 @@
 	font-size: 14px;
 	line-height: 2.26;
 	color: #1e1f26;
-	width: 286px;
-	margin-right: 25px;
+	width: 300px;
+	margin-right: 11px;
 }
 
 .nameInputPerson {
@@ -226,8 +226,8 @@
 
 .select__number:checked + .number:after {
 	content:'';
-	background-image: url("images/arrow-down.svg");	
-	width: 17px;
+    background-image: url("images/arrow-down.svg");	
+    width: 17px;
 	height: 17px;
 	background-repeat: no-repeat;
 	position: relative;

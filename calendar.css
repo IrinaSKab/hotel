@@ -1,36 +1,35 @@
+
 .calendar {
 	width: 300px;
-	height: 210px;
+	height: 245px;
 	text-align: center;
 	background: #ffffff;
 	font-family: ProximaNova;
 	border-collapse: collapse;
+	margin-top: 6px;
+	opacity: 0;
+	position: absolute;
+	z-index: 1;
+	pointer-events:none;
 }
 
 .month {
-	height: 32px;
+	height: 43px;
+	width: 300px;
 	background: #1e1f26;
 	color: #ffffff;
 	font-size: 18px;
 	font-weight: 400;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 3px;
 }
 
-.calendar__arrow-right {
-	width: 15px;
+.calendar__arrow-right, .calendar__arrow-left {
 	background-repeat: no-repeat;
 	background-size: contain;
-	float: right;
-	padding-top: 10px;
-	padding-right: 5px;
-}
-
-.calendar__arrow-left {
-	width: 15px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	float: left;
-	padding-top: 10px;
-	padding-left: 7px;
+	height: 24px;
+	margin: 12px 5px 0 9px;
 }
 
 .week {
@@ -60,4 +59,8 @@
 	border: 1px solid #adadad;
 }
 
-
+.form__inputDate:focus + .calendar {
+	opacity: 1;
+	transition: 1s;
+	pointer-events:all;
+}
