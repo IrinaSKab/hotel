@@ -32,6 +32,10 @@
 	margin: 12px 5px 0 9px;
 }
 
+.calendar__arrow-right, .calendar__arrow-left:hover {
+	cursor: pointer;
+}
+
 .week {
 	background: #1e1f26;
 	color: #ffffff;

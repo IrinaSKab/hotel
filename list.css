@@ -1,0 +1,161 @@
+.list {
+	width: 1800px;
+	margin: 0 auto;
+}
+
+.picture {
+	background-image: url("images/background-list.jpg");
+	height: 202px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+}
+
+.description-list {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+	margin-left: 324px;
+}
+
+.picture__button {
+	width: 96px;
+    height: 28px;
+    border-radius: 14px;
+	background: #db0536;
+	border: 2px solid #db0536;
+	font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: 400;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 82px; 
+	margin-left: 277px;
+}
+
+.picture__button:focus {
+	outline: none;
+}
+
+.picture__button:hover {
+	cursor: pointer;
+}
+
+.search__textarea {
+	width: 745px;
+	border: none;
+	border-bottom: 1px solid rgba(53, 54, 60);
+	font-family: ProximaNova;
+	font-size: 16px;
+	color: #1e1f26;
+	font-weight: 400;
+	line-height: 0.5;
+	padding-left: 10px;
+	margin-top: 53px;
+	margin-left: 520px;
+}
+
+.search__textarea:focus {
+	outline: none;
+}
+
+.hotels {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1161px;
+	margin-top: 150px;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0 4px 0 0;
+}
+
+.hotels_margin {
+	margin-top: 12px;
+	margin-bottom: 64px;
+}
+
+.hotels__choice {
+	position: relative;
+	height: 237px;
+}
+
+.hotels__picture {
+	width: 374px;
+	height: 237px;
+}
+
+.hotels__option {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	top: 70%;
+	left: 5%;
+	line-height: 0.3;
+}
+
+.hotels__choice::before {
+	content:'';
+	background-image: linear-gradient(to top, #1e1f26, #1e1f26);
+	display: block;
+	position: absolute;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+}
+
+.hotels__name {
+	font-family: ProximaNova;
+	font-size: 18px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.hotels__place {
+	font-family: ProximaNova;
+	font-size: 14px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.hotels__price {
+	font-family: ProximaNova;
+	font-size: 16px;
+	font-weight: 400;
+	color: #ffffff;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	top: 73%;
+	left: 76%;
+}
+
+.hotels__button {
+    width: 171px;
+    height: 41px;
+    border-radius: 20.5px;
+    border: 2px solid #db0536;
+    background: #db0536;
+    font-family: ProximaNova;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 41%;
+    left: 27%;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.hotels__button:hover {
+	cursor: pointer;
+}
+
+.hotels__button:focus {
+	outline: none;
+}
+
+.hotels__choice:hover .hotels__button {
+	opacity: 1;
+}
